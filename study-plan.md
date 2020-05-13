@@ -1,6 +1,14 @@
 ---
 title: Development and validation of a local trauma severity score for adult trauma patients in urban India
 subtitle: Study plan
+author: 
+- Siddarth David
+- Martin Gerdin Wärnberg
+documentclass: "article"
+output:
+  word_document
+bibliography: bibliography.bib
+csl: bmcemerg.csl
 ---
 
 Background
