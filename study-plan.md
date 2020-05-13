@@ -1,4 +1,6 @@
-**Development and validation of a local trauma severity score for adult trauma patients in urban India**
+---
+title: Development and validation of a local trauma severity score for adult trauma patients in urban India
+---
 
 **Background**
 
