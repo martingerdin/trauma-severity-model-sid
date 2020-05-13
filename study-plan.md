@@ -7,8 +7,8 @@ author:
 documentclass: "article"
 output:
   word_document
-bibliography: bibliography.bib
-csl: bmcemerg.csl
+#bibliography: bibliography.bib
+#csl: bmcemerg.csl
 ---
 
 Background
@@ -38,7 +38,7 @@ The three hospitals participating in this study are Maulana Azad Medical College
 Eligibility Criteria
 --------------------
 
-All adult patients (≥ 18 years of age) who were admitted to participating centers with a history of trauma---Chapter XX, block V01-Y36, in the International Classification of Disease 10th-revision (ICD 10) (57). Patients who were dead on arrival were excluded.
+All adult patients (age 18 years of age) who were admitted to participating centers with a history of trauma---Chapter XX, block V01-Y36, in the International Classification of Disease 10th-revision (ICD 10) (57). Patients who were dead on arrival were excluded.
 
 Variables
 ---------
