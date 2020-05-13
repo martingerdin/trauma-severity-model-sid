@@ -7,8 +7,8 @@ author:
 documentclass: "article"
 output:
   word_document
-bibliography: bibliography.bib
-csl: bmcemerg.csl
+#bibliography: bibliography.bib
+#csl: bmcemerg.csl
 ---
 
 Background
