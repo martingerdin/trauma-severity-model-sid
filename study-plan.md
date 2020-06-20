@@ -17,13 +17,16 @@ csl: bmcemerg.csl
 Background
 ==========
 
-Trauma accounts for one-tenth of all deaths and disability-adjusted life-years (DALYs) [@Toroyan2013WHO;@Chandran2010global;@Haagsma2015global]. Nearly 90% of trauma-related deaths occur in low-and-middle-income countries (LMICs), and improving trauma care in these settings can save nearly 2 million lives each year [@Mock2012Estimate;@Gururaj2013Injury]. Patient-related variables affect trauma outcomes. Therefore, it is important to quantify the variables in a standardized process [@Roy2016Validation;@Shibahashi2019Epidemiological]. They can, then be used to develop prediction models to estimate the probability of defined trauma outcomes [@Altman2009Prognosis;@Collins2015Transparent]. Such models can play a crucial role in managing and improving care in over-burdened and resource-constrained settings [@Rehn2011Prognostic;@Perel2008Predicting]. <!-- This paragraph has two main messages: 1. Trauma is a big problem. 2. Prediction models are good. I think you should split it into two paragraph -- SD: I get the point, but then I feel it would become two small paragraphs.-->
+Trauma accounts for eight per cent of all deaths and one-tenth of the disability-adjusted life-years (DALYs) across the world [@Haagsma2019].Transport injuries, self-harm and falls are among the top mechanisms of injury [@Karimkhani2016].Nearly 90% of trauma-related deaths occur in low-and-middle-income countries (LMICs), and improving trauma care in these settings can save nearly 2 million lives each year [@Mock2012Estimate;@Gururaj2013Injury]. The Sustainable Development Goals (SDGs) had set the target reduce injury-related mortality by 2020. However, there is still a lot of scope for improvement [James2018;@UnitedNations2019;@WorldHealthOrganizationWHO2018].
 
-Trauma severity is one variable that informs clinical practice at different stages such as pre-hospital triage, in-hospital decision-making, consequently, it is the most commonly used variable for prediction in trauma outcomes [@Champion2002Trauma;@Cook2014comparison;@Rehn2011Prognostic;@Fitzgerald2006India].There are several trauma scoring systems <!-- Same thing as trauma severity prediction model?--SD No, I wanted to say, that scoring systems help to measure severity by quantifying severity-->designed to quantify trauma severity. They use different physiological, anatomical parameters, injury features, and patient characteristics to determine severity, which is then used to predict outcomes, specifically mortality [@Moore2010new;@Skaga2018Validating;@Boyd1987Evaluating;@Champion1989revision;@Sartorius2010Mechanism;@Husum2003Respiratory;@West2000Harborview;@Burd2008Bayesian;@MacLeod2003Comparison;@Kondo2011Revised].
 
-The most widely used trauma severity prediction model is the Trauma and Injury Severity Score (TRISS) [@Gabbe2004]. This model was developed in a large sample from North America, and it predicts mortality using age, physiological status, anatomical severity of the injury, and the nature of the injury [@Boyd1987Evaluating;@Champion1990major]. Despite subsequent revisions [@Domingues2018New;@Schluter2010Trauma], TRISS continues to have considerable limitations. the predictive ability of TRISS is affected by the nature of the included variables like Glasgow Coma Scale (GCS) which has a high propensity for misclassification among severely injured patients and respiratory rate (RR) which is not routinely recorded [@Ringdal2008Utstein;@Demetriades1998TRISS;@Domingues2015Performance;Ghorbani2016Comparison;@Zafar2002Registry; @Munter2017Mortality; @Gabbe2004]. TRISS has also limited external validation in different settings, especially in LMICs [@Zafar2002Registry; @Khajanchi2013Indians;@Perel2006Systematic;@Hung2017Exploring;@Laytin2015Choice;@Kimura2012Modification;@Podang2004Primary; @Gerdin2014Predicting; @Deshmukh2012Analysis;@Agarwal2015Evaluation;@Samanamalee2018]. 
+Patient characteristics affect trauma outcomes [@Roy2016Validation;Shibahashi2019Epidemiological]. Trauma severity is a variable that informs clinical practice at different stages such as pre-hospital triage, in-hospital decision-making [@Champion2002Trauma;@Cook2014comparison;@Fitzgerald2006India].There are several trauma scoring systems designed to quantify trauma severity. They use different physiological, anatomical parameters, injury etiology, and patient attributes to determine severity, which is then used to predict outcomes, specifically mortality [@Moore2010new;@Skaga2018Validating;@Boyd1987Evaluating;@Champion1989revision;@Sartorius2010Mechanism;@Husum2003Respiratory;@West2000Harborview;@Burd2008Bayesian;@MacLeod2003Comparison;@Kondo2011Revised].
 
-Machine learning algorithms are increasingly used in medicine, including trauma, to accurately predict complex outcomes across different settings [@Christie2018Machine;@Gorczyca2019trauma;@Hubbard2013Time-dependent]. Ensemble machine learning algorithms combine several different statistical techniques to build an optimal prediction model rather than relying on a single technique [@Pirracchio2015Mortality]. Thus, they are flexible and can be used to capture the complex relationships in trauma data. The aim of this study is to develop a local trauma severity model using an ensemble machine learning algorithm and to compare this model with TRISS.
+
+In trauma studies, prediction models are used to estimate the probability of outcomes such as mortality in patients.  [@Altman2009Prognosis;@Collins2015Transparent]. These models use multiple patient characteristics such as age, gender, vital signs, etc. to determine outcomes [@Riley2020]. Prediction  models should be objective, replicable in different settings, less resource-intensive, and revised over time [Altman2009Prognosis;Rozenfeld2014ISS]. Such models can play a crucial role in managing and improving care in over-burdened and resource-constrained settings [@Rehn2011Prognostic;@Perel2008Predicting]. Machine learning algorithms are increasingly used in medicine, including trauma, to develop prediction models across different settings. [@Christie2018Machine;@Gorczyca2019trauma;@Hubbard2013Time-dependent]. Ensemble machine learning algorithms combine several different statistical techniques to build an optimal prediction model rather than relying on a single technique [@Pirracchio2015Mortality].
+
+
+The most widely used trauma severity prediction model is the Trauma and Injury Severity Score (TRISS) [@Gabbe2004]. This model was developed in a large sample from North America, and it predicts mortality using age, physiological status, anatomical severity of the injury, and the nature of the injury [@Boyd1987Evaluating;@Champion1990major]. Despite subsequent revisions [@Domingues2018New;@Schluter2010Trauma], TRISS continues to have considerable limitations. the predictive ability of TRISS is affected by the nature of the included variables like Glasgow Coma Scale (GCS) which has a high propensity for misclassification among severely injured patients and respiratory rate (RR) which is not routinely recorded [@Ringdal2008Utstein;@Demetriades1998TRISS;@Domingues2015Performance;Ghorbani2016Comparison;@Zafar2002Registry; @Munter2017Mortality; @Gabbe2004]. TRISS has also limited external validation in different settings, especially in LMICs [@Zafar2002Registry; @Khajanchi2013Indians;@Perel2006Systematic;@Hung2017Exploring;@Laytin2015Choice;@Kimura2012Modification;@Podang2004Primary; @Gerdin2014Predicting; @Deshmukh2012Analysis;@Agarwal2015Evaluation;@Samanamalee2018]. Thus, they are flexible and can be used to capture the complex relationships in trauma data. The aim of this study is to develop a local trauma severity model using an ensemble machine learning algorithm and to compare this model with TRISS.
 
 Methodology
 ===========
@@ -66,10 +69,29 @@ Project officers collecting outcome data in each center will also collect inform
 
 Sample Size
 ------------
+A recent study has recommended that for clinical prediction models samples, alongwith the number of events, predictor parameters, and the outcome incidence, the expected predictive performance of the model should also be be included [@Riley2020].A previous study on the a subset of the same population found the 30-day mortality to be around 8% [@WarnbergGerdin2020]. We will assume it to be around 10%. In this study there are 12 predictor variables and 20 free parameters. With an anticipated Cox-Snell R squared of 0.11 [@Riley2020], using the the proposed methodology for binary outcomes (mortality), the required sample size would be 
 
-To develop a prediction model with a binary outcome the current recommendation is to include at least ten events, i.e. participants with the outcome, and at least as many non-events per free parameter in the model [@Courvoisier2011Performance]. Depending on the data structure as many as 25 events and non-events or more per free parameter may be required to obtain stable estimates [@Ploeg2014Modern]. These recommendations are however mainly for logistic regression, whereas no recommendations exist for ensemble learners except that more data is likely needed [@VanderLaan2007]. We will therefore include at least 25 events and non-events per free parameter in the training sample.
+```{r sample-size, echo = FALSE, include = FALSE}
 
-A previous study on the a subset of the same population found the 30-day mortality to be around 8% [@WarnbergGerdin2020]. We will assume it to be around 10%. In this study there 12 predictor variables and 20 free parameters.The training sample would require around 5000 patients.For the validation and the test sample wold include around 200 events, that is 2000 patients in each sample. Therefore, the total sample required for this study is around 9000 patients.
+library(pmsampsize)
+# Outcome is binary (mortality)
+type <- "b"
+
+# Riley recommends R-squared of 0.48 for prevalnce of 0.1
+rsquared <- 0.48
+
+#There are 12 candidate predictors
+parameters <- 12
+
+#Shrinkage suggested 0.9
+
+#Based on Ludde et al 
+prevalence <- 0.1
+
+pmsampsize("b", 0.48, 12, 0.9, 0.1)
+
+```
+<!--This gives a minimum sample size of 357. Isn't that too low?-->
 
 
 Missing Data
@@ -82,9 +104,19 @@ Analyses and Statistical Methods
 
 ### Handling predictors and outcomes
 
-We will use R for all statistical analyses [@RCoreTeam2015]. For the model, predictors such as: SBP, RR, HR, SPO, GCS, ISS, and age were taken as continuous variables. Mode of transport to the health facility was divided into four groups: on feet, private vehicles (including cabs, automatic rickshaws),ambulance, and police van.There were two groups of types of injuries: blunt and penetrating. Mechanism of injury was categorized into five groups: road traffic injuries, falls, railway injuries, assaults and others.Sex was categorized into female and male.Thus, there are 20 free parameters.<!--Should I put this as a table?-->
+We will use R for all statistical analyses [@RCoreTeam2015]. For the model, predictors such as: SBP, RR, HR, SPO, GCS, ISS, and age were taken as continuous variables. Mode of transport to the health facility was divided into four groups: on feet, private vehicles (including cabs, automatic rickshaws),ambulance, and police van.There were two groups of types of injuries: blunt and penetrating. Mechanism of injury was categorized into five groups: road traffic injuries, falls, railway injuries, assaults and others.Sex was categorized into female and male.Thus, there are 20 free parameters (Table 1).
 
+```{r, results='asis'}
+Table1<-data.frame(Predictors=c("Mechanism of Injury", "Mechanism of Injury","Mechanism of Injury"," Mechanism of Injury"," Mechanism of Injury" ,"Type of Injury","Type of Injury","Mode of Transport","Mode of Transport","Mode of Transport","Mode of Transport","Gender","Gender","Systolic Blood Pressure","Respiratory Rate","Heart Rate","Heart Rate","Oxygen saturation","Glasgow Comma Scale","Injury Severity Score","Age"), Categories=c("Road Traffic Injury","Fall","Railway Injury","Assault","Others","Blunt","Penetrating", "Private Vehicle","Ambulance","Police Van","On foot","Male","Female","Continous Variable","Continous Variable","Continous Variable","Continous Variable","Continous Variable","Continous Variable","Continous Variable","Continous Variable"))
+library(knitr)
+library(kableExtra)
 
+kable(Table1)%>%
+  kable_styling(bootstrap_options = c("striped", "hover"))%>%
+  collapse_rows(columns=1:2, valign = "middle")
+  
+  ```
+  
 For the TRISS we used the specified categorization (@Champion2002Trauma). SBP is assigned into five groups:0 mm Hg, 1-49mm Hg, 50-75mm Hg, 76-89mm Hg, >89mm Hg. SPO is categorized into five groups: 0 or not measurable, 1-80, 81-90, 91-95 and 96-100.GCS is also assigned into five groups:GCS 15-13, GCS 12-9, GCS 8-6, GCS 5-4 and GCS 3.ISS was categorized as mild (ISS between 1 and 8). Age has two categories: less than 55 years and greater than or equal to 55 years.
 
 
@@ -100,7 +132,9 @@ Based on a recent review of machine learners for predicting outcomes in trauma p
 
 ### Model performance
 
-Performance and differences in performance will be estimated as medians across imputations and 95% confidence intervals will be estimated using bootstrapping.We will assess the local model and TRISS model for overall performance, discrimination, and calibration [@Steyerberg2010Assessing]. Discrimination, if the higher scores correspond to higher mortality, will be measured using sensitivity, specificity, and the area under the receiver-operating characteristic curve (AUROC), reported with corresponding 95% confidence interval (95% CI). Calibration, if the predicted mortality coincides well with the observed mortality, will be assessed by either Hosmer-Lemeshow statistic or Cox calibration test.<!-- Can you compare calibration between the ensemble and TRISS using these metrics? Will you come up with 95% CIs for these as well? SD: Can't we? I mean we can see good-of-fit for the ensemble and TRISS in predicting mortality, wouldn't that tell us which has better caliberation?-->.
+Performance and differences in performance will be estimated as medians across imputations and 95% confidence intervals will be estimated using bootstrapping.We will assess the local model and TRISS model for overall performance, discrimination, and calibration [@Steyerberg2010Assessing]. Discrimination, if the higher scores correspond to higher mortality, will be measured using sensitivity, specificity, and the area under the receiver-operating characteristic curve (AUROC), reported with corresponding 95% confidence interval (95% CI). Calibration, if the predicted mortality coincides well with the observed mortality, will be assessed by either Hosmer-Lemeshow statistic or Cox calibration test.
+
+<!--So, I didn't yet find much on using Hosmer-lemshow in comparing model. But I fould Akaike's criterion (AIC) it is a goodness-of-fit test by  sum of squares   number of parameters in the model. You get a probability of each model being better and probabilities add to 100. So, I guess it like 30 vs 60 or 20 vs 80. So we can compare the local vs. TRISS--> 
 
 
 
