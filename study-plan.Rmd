@@ -96,7 +96,7 @@ sample.size <- pmsampsize(type = type, rsquared = rsquared, parameters = paramet
 
 ```
 
-A recent study has recommended that for clinical prediction models samples, alongwith the number of events, predictor parameters, and the outcome incidence, the expected predictive performance of the model should also be be included [@Riley2020]<!-- This is an awkward sentence. Can't you just say that the recent study outlines four steps, or four factors that need to be considered?-->. A previous study on the a subset of the same population found the 30-day mortality to be around 8% [@WarnbergGerdin2020]. We will assume it to be around 10%. In this study there are 12 predictor variables and 20 free parameters. With an anticipated Cox-Snell R squared of 0.11 [@Riley2020], using the the proposed methodology for binary outcomes (mortality), the required sample size would be `r study.size` patients..
+A recent study has recommended that for clinical prediction models samples, alongwith the number of events, predictor parameters, and the outcome incidence, the expected predictive performance of the model should also be be included [@Riley2020]<!-- This is an awkward sentence. Can't you just say that the recent study outlines four steps, or four factors that need to be considered?-->. A previous study on the a subset of the same population found the 30-day mortality to be around 8% [@WarnbergGerdin2020]. We will assume it to be around 10%. In this study there are 12 predictor variables and 20 free parameters. With an anticipated Cox-Snell R squared of 0.11 [@Riley2020], using the the proposed methodology for binary outcomes (mortality), the required sample size would be `r sample.size` patients.
 
 <!--This gives a minimum sample size of 357. Isn't that too low?-->
 
